@@ -1,42 +1,98 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+@media (max-width: 990px) {
+  .image-text-container {
+    flex-direction: column ;
+    margin-left:auto;
+    margin-right: auto;
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+  } 
+
+  div{
+    margin-left:auto;
+    margin-right:auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  
+
+  @media (max-width: 480px) {
+    .center-items {
+      margin-left:auto;
+      margin-right: auto;
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  }
+  h3{
+    text-align: center;
+  }
+
+  .center-items .image-text-container {
+    margin-bottom: 20px;
+  }
+
+}
+@media (min-width: 769px) {
+  .image-text-container span {
+    display: inline-block;
+    max-width: 350px; /* Adjust the maximum width as desired */
+    margin-bottom:20px;
+  }
+  
+span{
+  display: none;
+}
+}
+
+.center-items{
+  border-bottom: 1px solid black;
+}
+
+.header{
+  width: 100% !important;
+}
+
+
+.box {
+  top: 0;
+  left: 0;
+
+  background-color: red;
+  height: 60px;
+  width: 2000px;
+  cursor: pointer;
+}
+
+.ball {
+  position: relative;
+
+}
+
+.Snapshot{
+  left:500px !important;
+}
+
+
+
+.footer{
+   margin-bottom:0;
+}
+
+/* App.css */
+/* ... your existing styles ... */
+
+/* Make the footer sticky at the bottom for viewport width up to 767px */
+@media (min-width: 767px) {
+  .sticky-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+/* Restore the default footer behavior for viewport width larger than 767px */
+@media (max-width: 768px) {
+  .sticky-footer {
+    position: static;
+    width: auto;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
